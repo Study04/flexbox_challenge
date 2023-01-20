@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* 1. Header and footer to a width of 100% and height of 50px with fixed position*/
+header,
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+}
+
+/* 2. Set the header to top value of 0 */
+header {
+  top: 0;
+}
+
+/* 3. Set the footer to the bottom  */
+footer {
+  bottom: 0;
+}
+
+/* 4. Style the main element as: 
+    Display to flex
+    The elements to wrap
+    padding to 50px for top and bottom and 0 for rest
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 50px 0; /* to compensate for the height of the header and footer */
+  overflow: auto; /* enable scrolling for main section */
+}
+
+main > div {
+  flex: 1; /* make columns equal width */
+}
+
+/* 5. Fix the width of middle column to 300px using the `flex` shorthand */
+.middle-column {
+  flex: 0 0 300px;
+}
